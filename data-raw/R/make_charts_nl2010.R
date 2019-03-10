@@ -1,4 +1,4 @@
-# make_charts.R
+# make_charts_nl2010.R
 #
 # Writes selected Dutch 2010 growth chart series to the data directory
 
@@ -38,21 +38,12 @@ hindostan <- c(
   "HMBA", "HMBC",
   "HMCA", "HMCC")
 
-preterms <- c(
-  paste0("PJAAN", 25:36), paste0("PJABN", 25:36),
-  paste0("PMAAN", 25:36), paste0("PMABN", 25:36),
-  paste0("PJEAN", 25:36),
-  paste0("PMEAN", 25:36))
-
-wholist <- c("WJAA", "WMAA", "WJBA", "WMBA")
-
-sides <- c(dutch, turkish, moroccan, hindostan, preterms, wholist)
-
+sides <- c(dutch, turkish, moroccan, hindostan)
 
 
 # write to chartbox
 project <- path.expand("~/package/chartbox/chartbox")
-chartbox <- file.path(project, "inst/nl")
+chartbox <- file.path(project, "inst/nl2010")
 for (chartcode in sides) {
   outfile <- file.path(chartbox, paste(chartcode, "rds", sep = "."))
   g <- growthchart(chartcode, paper = "A4")
