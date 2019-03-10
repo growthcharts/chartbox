@@ -4,14 +4,11 @@
 \alias{load_chart}
 \title{Load growth chart}
 \usage{
-load_chart(chartcode, chartgp = "nl2010")
+load_chart(chartcode)
 }
 \arguments{
 \item{chartcode}{A string containing the chart code. If a vector
 only the first element is processed.}
-
-\item{chartgp}{A string with the chart group name. Use
-\code{list_groups()} to see available groups.}
 }
 \value{
 A grid object

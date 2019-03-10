@@ -2,15 +2,23 @@
 #'
 #' @param chartcode A string containing the chart code. If a vector
 #' only the first element is processed.
-#' @param chartgp A string with the chart group name. Use
-#' \code{list_groups()} to see available groups.
 #' @return A grid object
 #' @examples
 #' z <- load_chart("NJAA")
 #' @export
-load_chart <- function(chartcode, chartgp = "nl2010") {
+load_chart <- function(chartcode) {
 
-  lib <- file.path(path.package("chartbox"), "library")
+  pop <- substr(chartcode, 1, 1)
+  chartgp <- switch(EXPR = pop,
+                    "N" = "nl2010",
+                    "M" = "nl2010",
+                    "T" = "nl2010",
+                    "P" = "preterm",
+                    "E" = "nl2010",
+                    "H" = "nl2010",
+                    "W" = "who")
+
+  lib <- file.path(find.package("chartbox"), "library")
   found <- intersect(chartgp, dir(lib))
   if (length(found) == 0L) {
     warning("Chart group ", chartgp, " not found.")
