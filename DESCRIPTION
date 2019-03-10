@@ -1,0 +1,11 @@
+Package: chartbox
+Type: Package
+Title: Collection of Growth Charts
+Version: 0.1.0
+Authors@R: person("Stef", "van Buuren", email = "stef.vanbuuren@tno.nl", role = c("aut", "cre"))
+Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
+Description: A collection of growth charts programmed in the grid package. 
+    It is used by other packages that add functionality to the charts.
+License: LICENSE
+Encoding: UTF-8
+LazyData: true
