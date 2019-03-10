@@ -8,8 +8,7 @@
 #' @export
 load_chart <- function(chartcode) {
 
-  pop <- substr(chartcode, 1, 1)
-  chartgp <- switch(EXPR = pop,
+  chartgp <- switch(EXPR = substr(chartcode[1L], 1L, 1L),
                     "N" = "nl2010",
                     "M" = "nl2010",
                     "T" = "nl2010",
