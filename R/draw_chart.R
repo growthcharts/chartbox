@@ -18,7 +18,7 @@ draw_chart <- function(chart,
   chartcode <- chart$name
 
   # set the palette
-  parsed <- chaco::parse.chartcode(chartcode)
+  parsed <- parse_chartcode(chartcode)
   palette(chartbox::palettes[parsed$population, ])
 
   filename <- file.path(paste(chartcode, "pdf", sep = "."))
