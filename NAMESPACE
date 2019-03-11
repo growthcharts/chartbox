@@ -2,6 +2,7 @@
 
 export(draw_chart)
 export(get_chartcode)
+export(list_charts)
 export(load_chart)
 export(parse_chartcode)
 importFrom(grDevices,dev.off)
