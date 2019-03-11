@@ -26,6 +26,7 @@ list_charts <- function(chartgp = NULL) {
     stringsAsFactors = FALSE)
 
   # subset if needed
+  #
   if (!is.null(chartgp)) df <- df[df$chartgp == chartgp, ]
   df
 }
