@@ -2,7 +2,8 @@
 #'
 #' @param chartcode A string containing the chart code. If a vector
 #' only the first element is processed.
-#' @return A grid object
+#' @return A grid object. Return \code{NULL} if the chart cannot
+#' be loaded.
 #' @examples
 #' z <- load_chart("NJAA")
 #' @export
@@ -19,16 +20,10 @@ load_chart <- function(chartcode) {
 
   lib <- file.path(find.package("chartbox"), "library")
   found <- intersect(chartgrp, dir(lib))
-  if (length(found) == 0L) {
-    warning("Chart group ", chartgrp, " not found.")
-    return(NULL)
-  }
+  if (length(found) == 0L) return(NULL)  # unknown chartcode
 
   fn <- file.path(lib, chartgrp, paste(chartcode[1L], "rds", sep = "."))
-  if (!file.exists(fn)) {
-    warning("File ", fn, " not found.")
-    return(NULL)
-  }
+  if (!file.exists(fn)) return(NULL)     # file not found
 
   readRDS(file = fn)
 }

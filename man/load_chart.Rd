@@ -11,7 +11,8 @@ load_chart(chartcode)
 only the first element is processed.}
 }
 \value{
-A grid object
+A grid object. Return \code{NULL} if the chart cannot
+be loaded.
 }
 \description{
 Load growth chart
