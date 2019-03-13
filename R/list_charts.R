@@ -1,12 +1,12 @@
 #' List available growth charts
 #'
-#' @param chartgp The chart group
+#' @param chartgrp The chart group
 #' @return A data frame
 #' @examples
 #' # list all available charts
 #' list_charts()
 #' @export
-list_charts <- function(chartgp = NULL) {
+list_charts <- function(chartgrp = NULL) {
 
   lib <- file.path(find.package("chartbox"), "library")
   fn <- list.files(lib, recursive = TRUE)
@@ -20,13 +20,13 @@ list_charts <- function(chartgp = NULL) {
   att3 <- data.frame(att2, stringsAsFactors = FALSE)
   colnames(att3) <- dimnames(att)[[2]]
   df <- data.frame(
-    chartgp = gp,
+    chartgrp = gp,
     chartcode = cd,
     att3,
     stringsAsFactors = FALSE)
 
   # subset if needed
   #
-  if (!is.null(chartgp)) df <- df[df$chartgp == chartgp, ]
+  if (!is.null(chartgrp)) df <- df[df$chartgrp == chartgrp, ]
   df
 }

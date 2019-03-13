@@ -4,10 +4,10 @@
 \alias{list_charts}
 \title{List available growth charts}
 \usage{
-list_charts(chartgp = NULL)
+list_charts(chartgrp = NULL)
 }
 \arguments{
-\item{chartgp}{The chart group}
+\item{chartgrp}{The chart group}
 }
 \value{
 A data frame
