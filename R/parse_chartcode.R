@@ -2,7 +2,7 @@
 #' Parses the chart code
 #'
 #' @aliases parse_chartcode
-#' @param chartcode the chart code, usually constructed by \code{get_chartcode()}
+#' @param chartcode the chart code, usually constructed by \code{create_chartcode()}
 #' @return The function returns a \code{list} with the following components:
 #' \describe{
 #'    \item{\code{population}}{A string identifying the population,

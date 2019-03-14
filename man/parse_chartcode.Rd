@@ -7,7 +7,7 @@
 parse_chartcode(chartcode = NULL)
 }
 \arguments{
-\item{chartcode}{the chart code, usually constructed by \code{get_chartcode()}}
+\item{chartcode}{the chart code, usually constructed by \code{create_chartcode()}}
 }
 \value{
 The function returns a \code{list} with the following components:

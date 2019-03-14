@@ -9,7 +9,7 @@ get_reference(chartgrp, chartcode, yname)
 \arguments{
 \item{chartgrp}{Chart group}
 
-\item{chartcode}{The chart code, returned by \code{chartbox::get_chartcode()}}
+\item{chartcode}{The chart code, returned by \code{chartbox::create_chartcode()}}
 
 \item{yname}{Names of the response variable}
 }

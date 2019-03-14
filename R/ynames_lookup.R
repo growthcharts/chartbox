@@ -6,7 +6,7 @@
 #' @format A data frame with 5 variables:
 #' \describe{
 #' \item{chartgrp}{Chart group}
-#' \item{chartcode}{Chart code as defined by \code{chartbox::get_chartcode()}. This
+#' \item{chartcode}{Chart code as defined by \code{chartbox::create_chartcode()}. This
 #' chart code can be decomposed by \code{chartbox::parse_chartcode()}}
 #' \item{yname}{Name of the outcome present on the chart, e.g. one of \code{hdc},
 #' \code{hgt}, \code{wgt}, \code{wfh}, \code{bmi}}

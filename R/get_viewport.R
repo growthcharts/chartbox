@@ -1,7 +1,7 @@
 #' Obtain the viewport number of the chart
 #'
 #' @param chartgrp Chart group
-#' @param chartcode The chart code, returned by \code{chartbox::get_chartcode()}
+#' @param chartcode The chart code, returned by \code{chartbox::create_chartcode()}
 #' @param yname Names of the response variable
 #' @return An integer with the viewport number
 #' @export

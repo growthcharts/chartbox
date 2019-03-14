@@ -1,7 +1,7 @@
 #' Obtain the growth reference behind the chart
 #'
 #' @param chartgrp Chart group
-#' @param chartcode The chart code, returned by \code{chartbox::get_chartcode()}
+#' @param chartcode The chart code, returned by \code{chartbox::create_chartcode()}
 #' @param yname Names of the response variable
 #' @return An object of class \code{reference}
 #' @seealso \code{\link[clopus]{reference-class}}

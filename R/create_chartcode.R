@@ -1,9 +1,9 @@
-#' Construct the chart code from the user input
+#' Construct a single chart code from user input
 #'
-#'@aliases get_chartcode
+#'@aliases create_chartcode
 #'@param chartgrp The chart group: \code{'nl2010'}, \code{'preterm'} or \code{'who'}
 #'@param etn Either \code{'netherlands'}, \code{'turkish'}, \code{'moroccan'} or
-#'\code{'hindustani'}
+#'\code{'hindustani'}. May also be abbreviates to a single letter.
 #'@param sex Either \code{'male'} or \code{'female'}
 #'@param agegrp Either \code{'0-15m'}, \code{'0-4y'}, \code{'1-21y'}, \code{'0-21y'}
 #' or \code{'0-4ya'}. Age group \code{'0-4ya'} provides the 0-4 chart with weight
@@ -11,16 +11,16 @@
 #'@param side Either \code{'front'}, \code{'back'}, \code{'-hdc'} or \code{'both'}
 #'@param week A number between 25 and 36 gestational age. Only used for preterm charts.
 #'@param language Language: \code{'dutch'} or \code{'english'}
-#'@param version Version number
+#'@param version Version number. Default is to have no version number.
 #'@export
-get_chartcode <- function(chartgrp = c('nl2010', 'preterm', 'who'),
+create_chartcode <- function(chartgrp = c('nl2010', 'preterm', 'who'),
                           etn = c('netherlands', 'turkish', 'moroccan','hindustani'),
                           sex = c('male', 'female'),
                           agegrp = c('0-15m', '0-4y', '1-21y', '0-21y', '0-4ya'),
                           side = c('front', 'back', '-hdc', 'both'),
                           week = 32,
                           language = c('dutch','english'),
-                          version = '3')
+                          version = '')
 {
   chartgrp <- match.arg(chartgrp)
   etn <- match.arg(etn)
