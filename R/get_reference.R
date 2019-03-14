@@ -1,8 +1,9 @@
 #' Obtain the growth reference behind the chart
 #'
-#' @param chartgrp Chart group
 #' @param chartcode The chart code, returned by \code{chartbox::create_chartcode()}
 #' @param yname Names of the response variable
+#' @param chartgrp The chart group. If not specified, it is calculated
+#' automatically.
 #' @return An object of class \code{reference}
 #' @seealso \code{\link[clopus]{reference-class}}
 #' @examples
@@ -10,7 +11,9 @@
 #' get_reference("nl2010", "NJAA", "hgt")
 #' }
 #' @export
-get_reference <- function(chartgrp, chartcode, yname) {
+get_reference <- function(chartcode,
+                          yname,
+                          chartgrp = get_chartgrp(chartcode)) {
   tab <- chartbox::ynames_lookup
   idx <- tab$chartgrp %in% chartgrp[1L] &
     tab$chartcode %in% chartcode[1L] &

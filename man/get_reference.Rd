@@ -4,14 +4,15 @@
 \alias{get_reference}
 \title{Obtain the growth reference behind the chart}
 \usage{
-get_reference(chartgrp, chartcode, yname)
+get_reference(chartcode, yname, chartgrp = get_chartgrp(chartcode))
 }
 \arguments{
-\item{chartgrp}{Chart group}
-
 \item{chartcode}{The chart code, returned by \code{chartbox::create_chartcode()}}
 
 \item{yname}{Names of the response variable}
+
+\item{chartgrp}{The chart group. If not specified, it is calculated
+automatically.}
 }
 \value{
 An object of class \code{reference}
