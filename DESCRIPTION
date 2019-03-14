@@ -1,12 +1,12 @@
 Package: chartbox
 Type: Package
 Title: Collection of Growth Charts
-Version: 0.2.1
+Version: 0.3.0
 Authors@R: person("Stef", "van Buuren", email = "stef.vanbuuren@tno.nl", role = c("aut", "cre"))
 Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
 Description: A collection of growth charts programmed in the grid package. 
     It is used by other packages that add functionality to the charts.
-License: LICENSE
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
@@ -14,3 +14,5 @@ Depends:
     R (>= 2.10)
 Imports: 
     grDevices
+Suggests:
+    clopus
