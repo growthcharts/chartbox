@@ -172,6 +172,39 @@ refs <- lapply(ynames_lookup$reference, function(x) eval(parse(text = x)))
 idx <- sapply(refs, is.null)
 ynames_lookup$reference[idx]
 
+# add lookup for transformation functions: tx() and ty()
+get_tx_calltext <- function(chartgrp, chartcode, yname) {
+  p <- chartbox::parse_chartcode(chartcode)
+
+  if (p$design == "A") return("function(x) x * 12")
+  "function(x) x"
+}
+
+get_ty_calltext <- function(chartgrp, chartcode, yname) {
+  p <- chartbox::parse_chartcode(chartcode)
+
+  if (yname == "wfh") return("function(y) log10(y)")
+  if (yname == "wgt" && p$design  == "E") return("function(y) log10(y)")
+  "function(y) y"
+}
+
+ynames_lookup$tx <- NA_character_
+for (i in 1:nrow(ynames_lookup)) {
+  text <- get_tx_calltext(ynames_lookup[i, "chartgrp"],
+                          ynames_lookup[i, "chartcode"],
+                          ynames_lookup[i, "yname"])
+  ynames_lookup[i, "tx"] <- text
+}
+
+ynames_lookup$ty <- NA_character_
+for (i in 1:nrow(ynames_lookup)) {
+  text <- get_ty_calltext(ynames_lookup[i, "chartgrp"],
+                          ynames_lookup[i, "chartcode"],
+                          ynames_lookup[i, "yname"])
+  ynames_lookup[i, "ty"] <- text
+}
+
+
 # save
 usethis::use_data(ynames_lookup, overwrite = TRUE)
 

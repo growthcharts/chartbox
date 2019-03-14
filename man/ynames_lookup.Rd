@@ -18,6 +18,8 @@ specify the \code{vp} argument as
 \item{reference}{A string indicating the reference in \code{clopus}.
 The \code{get_reference()} function actually pulls out the relevant
 references from \code{clopus}}
+\item{tx}{A string coding the transformation function for the x variable}
+\item{ty}{A string coding the transformation function for the y variable}
 }}
 \usage{
 ynames_lookup
