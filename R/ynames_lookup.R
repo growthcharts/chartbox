@@ -3,7 +3,7 @@
 #' A data set containing the kind of outcomes present on each chart
 #' in \code{inst/library}
 #'
-#' @format A data frame with 5 variables:
+#' @format A data frame with variables:
 #' \describe{
 #' \item{chartgrp}{Chart group}
 #' \item{chartcode}{Chart code as defined by \code{chartbox::create_chartcode()}. This
@@ -21,6 +21,6 @@
 #' \item{ty}{A string coding the transformation function for the y variable}
 #' \item{seq}{Transformation sequence: either \code{"tr"} (first transform,
 #' then calculate reference) or either \code{"rt"} (first calculate reference,
-#' then transform).
+#' then transform).}
 #' }
 "ynames_lookup"
