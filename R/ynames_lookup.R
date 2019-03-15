@@ -19,5 +19,8 @@
 #' references from \code{clopus}}
 #' \item{tx}{A string coding the transformation function for the x variable}
 #' \item{ty}{A string coding the transformation function for the y variable}
+#' \item{seq}{Transformation sequence: either \code{"tr"} (first transform,
+#' then calculate reference) or either \code{"rt"} (first calculate reference,
+#' then transform).
 #' }
 "ynames_lookup"

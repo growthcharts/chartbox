@@ -204,6 +204,12 @@ for (i in 1:nrow(ynames_lookup)) {
   ynames_lookup[i, "ty"] <- text
 }
 
+# transformation sequence
+# trp transform-reference
+# rtp reference-transform
+
+ynames_lookup$seq <- "tr"
+ynames_lookup$seq[ynames_lookup$chartgrp == "preterm"] <- "rt"
 
 # save
 usethis::use_data(ynames_lookup, overwrite = TRUE)
