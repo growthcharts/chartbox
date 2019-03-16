@@ -17,3 +17,5 @@ Imports:
     clopus,
     dplyr,
     rlang
+Suggests: 
+    testthat
