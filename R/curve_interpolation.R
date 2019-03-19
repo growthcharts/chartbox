@@ -97,13 +97,20 @@ curve_interpolation <- function(data, xname = "x", yname = "y",
     mutate(!!zname := approx(x = .data[[xname]], y = .data[[zname]],
                                xout = .data[[xname]])$y) %>%
     ungroup() %>%
-    mutate(!!yname := z2y(z = .data[[zname]], x = .data[[xname]],
-                          ref = reference)) %>%
+    mutate(yt = z2y(z = .data[[zname]], x = .data[[xname]],
+                    ref = reference))
+
+  # overwrite any NA's in yname
+  ov <- grid %>%
+    filter(is.na(.data[[yname]])) %>%
+    mutate(!!yname := .data$yt)
+  grid <- grid %>%
+    filter(!is.na(.data[[yname]])) %>%
+    bind_rows(ov) %>%
     select(one_of(c("id", xname, yname, zname, "obs")))
 
-  grid2 <- grid %>%
+  # append singletons and sort
+  grid %>%
     bind_rows(singletons) %>%
     arrange(!!! rlang::syms(c("id", xname)))
-
-  grid2
 }

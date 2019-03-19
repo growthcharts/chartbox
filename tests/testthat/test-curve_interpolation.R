@@ -17,14 +17,14 @@ data2 <- data.frame(
 ref <- clopus::nl2009[["nl2009.mhgtNL"]]
 
 test_that("handles id with single observations", {
-  expect_equal(c(NA, 60.0, 68.4, 75.9, 78.0, 69.0, 62.0, 72.5, 78.0, 82.0),
+  expect_equal(c(52, 60.0, 68.4, 75.9, 78.0, 69.0, 62.0, 72.5, 78.0, 82.0),
                curve_interpolation(data1, xname = "age", yname = "hgt", xout = seq(0, 1.3, 0.5),
                                    reference = ref)$hgt,
                tolerance = 0.001)
   })
 
 test_that("handles id with all missing outcome measurements", {
-  expect_equal(c(NA, 60.0, 68.4, 75.9, 78.0, 69.0, 70.0, NA, NA, NA, NA),
+  expect_equal(c(52, 60.0, 68.4, 75.9, 78.0, 69.0, 70.0, NA, NA, NA, NA),
                curve_interpolation(data2, xname = "age", yname = "hgt", xout = seq(0, 1.3, 0.5),
                                    reference = ref)$hgt,
                tolerance = 0.001)
