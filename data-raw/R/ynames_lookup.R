@@ -210,6 +210,10 @@ for (i in 1:nrow(ynames_lookup)) {
 
 ynames_lookup$seq <- "tr"
 ynames_lookup$seq[ynames_lookup$chartgrp == "preterm"] <- "rt"
+ynames_lookup$seq[ynames_lookup$chartcode == "NMEA" &
+                    ynames_lookup$yname == "wgt"] <- "rt"
+ynames_lookup$seq[ynames_lookup$chartcode == "NJEA" &
+                    ynames_lookup$yname == "wgt"] <- "rt"
 
 # save
 usethis::use_data(ynames_lookup, overwrite = TRUE)
