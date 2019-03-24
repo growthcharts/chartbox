@@ -21,7 +21,7 @@
 #'    Only used if \code{population == "PT"}.}
 #'    }
 #' @export
-parse_chartcode <- function(chartcode = NULL){
+parse_chartcode <- function(chartcode = NULL) {
 
   if (is.null(chartcode)) return(NULL)
   chartcode <- chartcode[1]
