@@ -3,6 +3,7 @@
 # Writes selected WHO growth charts
 
 library(chaco)
+library(chartbox)
 
 wholist <- c("WJAA", "WMAA", "WJBA", "WMBA")
 
@@ -32,7 +33,7 @@ pdf.options(useDingbats = FALSE, colormodel = "srgb", family = "Helvetica")
 
 setpalet <- function(chartcode) {
   palettes <- create.palettes()
-  parsed <- parse.chartcode(chartcode)
+  parsed <- parse_chartcode(chartcode)
   palette(palettes[parsed$population,])
 }
 

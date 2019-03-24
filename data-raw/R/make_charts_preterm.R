@@ -3,6 +3,7 @@
 # Writes selected preterm growth chart series
 
 library(chaco)
+library(chartbox)
 
 preterms <- c(
   paste0("PJAAN", 25:36), paste0("PJABN", 25:36),
@@ -34,7 +35,7 @@ pdf.options(useDingbats = FALSE, colormodel = "srgb", family = "Helvetica")
 
 setpalet <- function(chartcode) {
   palettes <- create.palettes()
-  parsed <- parse.chartcode(chartcode)
+  parsed <- parse_chartcode(chartcode)
   palette(palettes[parsed$population,])
 }
 

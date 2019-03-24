@@ -3,6 +3,9 @@
 # Writes selected Dutch 2010 growth chart series to the data directory
 
 library(chaco)
+library(chartbox)
+
+paper <- "A4"
 
 dutch <- c(
   "NJAA", "NJAB",
@@ -46,7 +49,7 @@ project <- path.expand("~/package/chartbox/chartbox")
 chartbox <- file.path(project, "inst/library/nl2010")
 for (chartcode in sides) {
   outfile <- file.path(chartbox, paste(chartcode, "rds", sep = "."))
-  g <- growthchart(chartcode, paper = "A4")
+  g <- growthchart(chartcode, paper = paper)
   saveRDS(g, file = outfile, compress = "xz")
 }
 
@@ -63,7 +66,7 @@ pdf.options(useDingbats = FALSE, colormodel = "srgb", family = "Helvetica")
 
 setpalet <- function(chartcode) {
   palettes <- create.palettes()
-  parsed <- parse.chartcode(chartcode)
+  parsed <- parse_chartcode(chartcode)
   palette(palettes[parsed$population,])
 }
 
