@@ -4,11 +4,14 @@
 #' @param yname Names of the response variable
 #' @param chartgrp The chart group. If not specified, it is calculated
 #' automatically.
-#' @return Name of the viewport
+#' @param number If \code{number == TRUE} the function return the viewport
+#' number. If \code{number == FALSE} the function return the viewport name.
+#' @return Number, or name, of the viewport
 #' @export
 get_viewport <- function(chartcode,
                          yname,
-                         chartgrp = get_chartgrp(chartcode)) {
+                         chartgrp = get_chartgrp(chartcode),
+                         number = TRUE) {
   tab <- chartbox::ynames_lookup
   idx <- tab$chartgrp %in% chartgrp[1L] &
     tab$chartcode %in% chartcode[1L] &
@@ -21,5 +24,5 @@ get_viewport <- function(chartcode,
     warning("Search combination not found")
     return(NULL)
   }
-  tab[idx, "vp"]
+  tab[idx, ifelse((number), "vpn", "vp")]
 }

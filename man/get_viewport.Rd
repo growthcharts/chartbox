@@ -4,7 +4,8 @@
 \alias{get_viewport}
 \title{Obtain the viewport name of the chart}
 \usage{
-get_viewport(chartcode, yname, chartgrp = get_chartgrp(chartcode))
+get_viewport(chartcode, yname, chartgrp = get_chartgrp(chartcode),
+  number = TRUE)
 }
 \arguments{
 \item{chartcode}{The chart code, returned by \code{chartbox::create_chartcode()}}
@@ -13,9 +14,12 @@ get_viewport(chartcode, yname, chartgrp = get_chartgrp(chartcode))
 
 \item{chartgrp}{The chart group. If not specified, it is calculated
 automatically.}
+
+\item{number}{If \code{number == TRUE} the function return the viewport
+number. If \code{number == FALSE} the function return the viewport name.}
 }
 \value{
-Name of the viewport
+Number, or name, of the viewport
 }
 \description{
 Obtain the viewport name of the chart
