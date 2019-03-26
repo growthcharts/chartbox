@@ -12,6 +12,8 @@
 #' \code{hgt}, \code{wgt}, \code{wfh}, \code{bmi}}
 #' \item{vp}{The viewport name for editing the outcome. Use this to
 #' specify the \code{vp} argument.}
+#' \item{vpn}{Viewport number for editing the outcome. Use it in
+#' \code{g$childrenvp[[vpn]]}}.
 #' \item{reference}{A string indicating the reference in \code{clopus}.
 #' The \code{get_reference()} function actually pulls out the relevant
 #' references from \code{clopus}}

@@ -15,7 +15,7 @@ chartbox <- file.path(project, "inst/library")
 chart_table <- chartbox::list_charts()
 
 # derive lookup table for viewport and reference
-get_viewport_vector <- function(chartcode) {
+get_viewport_vector_name <- function(chartcode) {
   p <- chartbox::parse_chartcode(chartcode)
   if (p$design == "A" & p$side == "front") return(c("A", "B", "C", NA, NA))
   if (p$design == "A" & p$side == "back")  return(rep(NA, 5))
@@ -29,6 +29,23 @@ get_viewport_vector <- function(chartcode) {
   if (p$design == "E" & p$side == "back")  return(c("A", NA, NA, NA, NA))
   return(rep(NA, 5))
 }
+
+# derive lookup table for viewport and reference
+get_viewport_vector_number <- function(chartcode) {
+  p <- chartbox::parse_chartcode(chartcode)
+  if (p$design == "A" & p$side == "front") return(c(3, 4, 5, NA, NA))
+  if (p$design == "A" & p$side == "back")  return(rep(NA, 5))
+  if (p$design == "B" & p$side == "front") return(c(NA, 4, NA, NA, 3))
+  if (p$design == "B" & p$side == "back")  return(c(1, NA, NA, NA, NA))
+  if (p$design == "B" & p$side == "-hdc")  return(rep(NA, 5))
+  if (p$design == "C" & p$side == "front") return(c(NA, 4, NA, NA, 3))
+  if (p$design == "C" & p$side == "back")  return(c(3, NA, NA, 2, NA))
+  if (p$design == "C" & p$side == "-hdc")  return(c(NA, NA, NA, 2, NA))
+  if (p$design == "E" & p$side == "front") return(c(NA, 4, 3, NA, NA))
+  if (p$design == "E" & p$side == "back")  return(c(1, NA, NA, NA, NA))
+  return(rep(NA, 5))
+}
+
 
 # lookup for vp
 ynames <- c("hdc", "hgt", "wgt", "bmi", "wfh")
@@ -44,11 +61,34 @@ ynames_lookup <- data.frame(
 for (i in seq_along(chart_table$chartcode)) {
   chart <- chart_table$chartcode[i]
   g <- chartbox::load_chart(chart)
-  ynames_lookup[i, ynames] <- get_viewport_vector(chart)
+  ynames_lookup[i, ynames] <- get_viewport_vector_name(chart)
 }
 ynames_lookup <- ynames_lookup %>%
   tidyr::gather(key = "yname", value = "vp", -chartgrp, -chartcode, na.rm = TRUE) %>%
   dplyr::arrange(chartgrp, chartcode, yname)
+vp <- ynames_lookup$vp
+
+# lookup for vpn
+ynames <- c("hdc", "hgt", "wgt", "bmi", "wfh")
+ynames_lookup <- data.frame(
+  chartgrp = chart_table$chartgrp,
+  chartcode = chart_table$chartcode,
+  hdc = NA,
+  hgt = NA,
+  wgt = NA,
+  bmi = NA,
+  wfh = NA,
+  stringsAsFactors = FALSE)
+for (i in seq_along(chart_table$chartcode)) {
+  chart <- chart_table$chartcode[i]
+  g <- chartbox::load_chart(chart)
+  ynames_lookup[i, ynames] <- get_viewport_vector_number(chart)
+}
+ynames_lookup <- ynames_lookup %>%
+  tidyr::gather(key = "yname", value = "vpn", -chartgrp, -chartcode, na.rm = TRUE) %>%
+  dplyr::arrange(chartgrp, chartcode, yname)
+ynames_lookup$vp <- vp
+
 
 ## lookup for reference
 get_reference_calltext <- function(chartgrp, chartcode, yname) {
