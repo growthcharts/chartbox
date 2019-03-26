@@ -1,10 +1,10 @@
-#' Obtain the viewport number of the chart
+#' Obtain the viewport name of the chart
 #'
 #' @param chartcode The chart code, returned by \code{chartbox::create_chartcode()}
 #' @param yname Names of the response variable
 #' @param chartgrp The chart group. If not specified, it is calculated
 #' automatically.
-#' @return An integer with the viewport number
+#' @return Name of the viewport
 #' @export
 get_viewport <- function(chartcode,
                          yname,

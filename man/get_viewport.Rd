@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_viewport.R
 \name{get_viewport}
 \alias{get_viewport}
-\title{Obtain the viewport number of the chart}
+\title{Obtain the viewport name of the chart}
 \usage{
 get_viewport(chartcode, yname, chartgrp = get_chartgrp(chartcode))
 }
@@ -15,8 +15,8 @@ get_viewport(chartcode, yname, chartgrp = get_chartgrp(chartcode))
 automatically.}
 }
 \value{
-An integer with the viewport number
+Name of the viewport
 }
 \description{
-Obtain the viewport number of the chart
+Obtain the viewport name of the chart
 }

@@ -11,10 +11,8 @@
 chart code can be decomposed by \code{chartbox::parse_chartcode()}}
 \item{yname}{Name of the outcome present on the chart, e.g. one of \code{hdc},
 \code{hgt}, \code{wgt}, \code{wfh}, \code{bmi}}
-\item{vp}{The viewport number for editing the outcome. Use this to
-specify the \code{vp} argument as
-\code{vp = g$childrenvp[[{viewport number}]]}.
-}
+\item{vp}{The viewport name for editing the outcome. Use this to
+specify the \code{vp} argument.}
 \item{reference}{A string indicating the reference in \code{clopus}.
 The \code{get_reference()} function actually pulls out the relevant
 references from \code{clopus}}
