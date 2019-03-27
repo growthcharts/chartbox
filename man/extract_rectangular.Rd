@@ -5,12 +5,16 @@
 \title{Extract rectangular plots from a chart}
 \usage{
 extract_rectangular(chartcode, ynames = c("hgt", "wgt", "hdc", "bmi",
-  "wfh"), width = unit(18, "cm"))
+  "wfh"), asp = NULL, width = unit(18, "cm"))
 }
 \arguments{
 \item{chartcode}{The chart code}
 
 \item{ynames}{Vector with names of measures to extract}
+
+\item{asp}{Aspect ratio. Specify \code{asp = 1} for square
+data area. The default takes the aspect ratio from the
+chart.}
 
 \item{width}{The width of the plot area + margins. The default
 is \code{unit("18", "cm")}}
@@ -28,6 +32,6 @@ library(chartbox)
 p <- extract_rectangular("NJAA")
 palette(palettes[1, ])
 grid.newpage()
-grid.draw(p[["wgt"]])
+grid.draw(p[["hgt"]])
 }
 }
