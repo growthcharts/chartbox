@@ -1,7 +1,7 @@
 set_form_design <- function(g) {
 
   if (g$name != "axes")
-    stop("Expected object with name `axes`, but found ", g$name)
+    stop("Expected object with name `axes`")
 
   # set rectangular axis
   xlim <- range(as.numeric(g$children$plotarea$x))
