@@ -77,7 +77,7 @@ create_chartcode <- function(chartgrp = c('nl2010', 'preterm', 'who'),
                'wgt'   = 'W',
                'hdc'   = 'O',
                'bmi'   = 'Q',
-               'wfh'   = 'W')
+               'wfh'   = 'R')
 
   ## we have no backside charts for preterms, so use
   ## Dutch charts instead
