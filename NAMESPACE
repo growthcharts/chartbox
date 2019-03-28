@@ -3,7 +3,6 @@
 export(create_chartcode)
 export(curve_interpolation)
 export(draw_chart)
-export(extract_rectangular)
 export(get_chartgrp)
 export(get_reference)
 export(get_seq)
