@@ -7,8 +7,9 @@
 create_chartcode(chartgrp = c("nl2010", "preterm", "who"),
   etn = c("netherlands", "turkish", "moroccan", "hindustani"),
   sex = c("male", "female"), agegrp = c("0-15m", "0-4y", "1-21y",
-  "0-21y", "0-4ya"), side = c("front", "back", "-hdc", "both"),
-  week = 32, language = c("dutch", "english"), version = "")
+  "0-21y", "0-4ya"), side = c("front", "back", "-hdc", "both", "hgt",
+  "wgt", "hdc", "bmi", "wfh"), week = 32, language = c("dutch",
+  "english"), version = "")
 }
 \arguments{
 \item{chartgrp}{The chart group: \code{'nl2010'}, \code{'preterm'} or \code{'who'}}

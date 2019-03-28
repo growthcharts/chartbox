@@ -17,7 +17,8 @@ create_chartcode <- function(chartgrp = c('nl2010', 'preterm', 'who'),
                           etn = c('netherlands', 'turkish', 'moroccan','hindustani'),
                           sex = c('male', 'female'),
                           agegrp = c('0-15m', '0-4y', '1-21y', '0-21y', '0-4ya'),
-                          side = c('front', 'back', '-hdc', 'both'),
+                          side = c('front', 'back', '-hdc', 'both', 'hgt',
+                                   'wgt', 'hdc', 'bmi', 'wfh'),
                           week = 32,
                           language = c('dutch','english'),
                           version = '')
@@ -70,14 +71,20 @@ create_chartcode <- function(chartgrp = c('nl2010', 'preterm', 'who'),
   c4 <- switch(side,
                'front' = 'A',
                'back'  = 'B',
-               '-hdc' = 'C',
-               'both'  = 'X')
+               '-hdc'  = 'C',
+               'both'  = 'X',
+               'hgt'   = 'H',
+               'wgt'   = 'W',
+               'hdc'   = 'O',
+               'bmi'   = 'Q',
+               'wfh'   = 'W')
+
   ## we have no backside charts for preterms, so use
-  ## Dutch charts
-  if (c1 == 'P' & c4 != 'A') c1 <- 'N'
+  ## Dutch charts instead
+  if (c1 == 'P' & any(c4 %in% c('B', 'C', 'X'))) c1 <- 'N'
 
   ## WHO: front only
-  if (c1 == 'W') c4 <- 'A'
+  if (c1 == 'W' & any(c4 %in% c('B', 'C', 'X'))) c4 <- 'A'
 
   ## c5 language, only two versions for preterms
   c5 <- switch(language,

@@ -1,4 +1,3 @@
-
 #' Parses the chart code
 #'
 #' @aliases parse_chartcode
@@ -12,8 +11,9 @@
 #'    \item{\code{design}}{A letter indicating the chart design: \code{'A'} = 0-15m,
 #'    \code{'B'} = 0-4y, \code{'C'} = 1-21y, \code{'D'} = 0-21y, \code{'E'} =
 #'    0-4ya.}
-#'    \item{\code{side}}{A string indicating the side: \code{'front'}, \code{'back'},
-#'    \code{'both'}}
+#'    \item{\code{side}}{A string indicating the side or \code{yname}:
+#'    \code{'front'}, \code{'back'}, \code{'both'}, \code{'hgt'},
+#'    \code{'wgt'}, \code{'hdc'}, \code{'bmi'}, \code{'wfh'}}
 #'    \item{\code{language}}{The language in which the chart is drawn. Currently only
 #'    \code{"dutch"} charts are implemented, but for \code{population == "PT"} we
 #'    may also have \code{"english"}.}
@@ -55,6 +55,11 @@ parse_chartcode <- function(chartcode = NULL) {
                  'B' = "back",
                  'C' = "-hdc",
                  'X' = "both",
+                 'H' = "hgt",
+                 'W' = "wgt",
+                 'O' = "hdc",
+                 'Q' = "bmi",
+                 'R' = "wfh",
                  NULL)
 
   # 5: language
@@ -76,4 +81,3 @@ parse_chartcode <- function(chartcode = NULL) {
               language = language,
               week = week))
 }
-
