@@ -7,9 +7,10 @@ library(chartbox)
 
 wholist <- c("WJAA", "WMAA", "WJBA", "WMBA")
 
-sides <- wholist
+solo <- c("WJAO", "WJAH", "WJAW", "WJBR", "WJBH",
+          "WMAO", "WMAH", "WMAW", "WMBR", "WMBH")
 
-
+sides <- c(wholist, solo)
 
 # write to chartbox
 project <- path.expand("~/package/chartbox/chartbox")
