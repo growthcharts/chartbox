@@ -41,8 +41,19 @@ hindostan <- c(
   "HMBA", "HMBC",
   "HMCA", "HMCC")
 
-sides <- c(dutch, turkish, moroccan, hindostan)
+solo <- c(
+  "HJAO", "HJAH", "HJAW", "HJBR", "HJBH", "HJCR", "HJCH", "HJCQ",
+  "HMAO", "HMAH", "HMAW", "HMBR", "HMBH", "HMCR", "HMCH", "HMCQ",
+  "MJAO", "MJAH", "MJAW", "MJBR", "MJBH", "MJBO", "MJCR", "MJCH", "MJCQ", "MJCO",
+  "MMAO", "MMAH", "MMAW", "MMBR", "MMBH", "MMBO", "MMCR", "MMCH", "MMCQ", "MMCO",
+  "NJAO", "NJAH", "NJAW", "NJBR", "NJBH", "NJBO", "NJCR", "NJCH", "NJCQ", "NJCO",
+  "NJEW", "NJEH", "NJEO",
+  "NMAO", "NMAH", "NMAW", "NMBR", "NMBH", "NMBO", "NMCR", "NMCH", "NMCQ", "NMCO",
+  "NMEW", "NMEH", "NMEO",
+  "TJAO", "TJAH", "TJAW", "TJBR", "TJBH", "TJBO", "TJCR", "TJCH", "TJCQ", "TJCO",
+  "TMAO", "TMAH", "TMAW", "TMBR", "TMBH", "TMBO", "TMCR", "TMCH", "TMCQ", "TMCO")
 
+sides <- c(dutch, turkish, moroccan, hindostan, solo)
 
 # write to chartbox
 project <- path.expand("~/package/chartbox/chartbox")
