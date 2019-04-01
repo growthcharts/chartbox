@@ -11,7 +11,14 @@ preterms <- c(
   paste0("PJEAN", 25:36),
   paste0("PMEAN", 25:36))
 
-sides <- preterms
+solo <-
+  c(paste0("PJAON", 25:36), paste0("PMAON", 25:36),
+    paste0("PJAWN", 25:36), paste0("PMAWN", 25:36),
+    paste0("PJAHN", 25:36), paste0("PMAHN", 25:36),
+    paste0("PJEHN", 25:36), paste0("PMEHN", 25:36),
+    paste0("PJEWN", 25:36), paste0("PMEWN", 25:36))
+
+sides <- c(preterms, solo)
 
 # write to chartbox
 project <- path.expand("~/package/chartbox/chartbox")
