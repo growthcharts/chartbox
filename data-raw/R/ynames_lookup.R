@@ -27,6 +27,11 @@ get_viewport_vector_name <- function(chartcode) {
   if (p$design == "C" & p$side == "-hdc")  return(c(NA, NA, NA, "A", NA))
   if (p$design == "E" & p$side == "front") return(c(NA, "B", "A", NA, NA))
   if (p$design == "E" & p$side == "back")  return(c("A", NA, NA, NA, NA))
+  if (p$side == "hgt") return(c(NA, "A", NA, NA, NA))
+  if (p$side == "wgt") return(c(NA, NA, "A", NA, NA))
+  if (p$side == "hdc") return(c("A", NA, NA, NA, NA))
+  if (p$side == "bmi") return(c(NA, NA, NA, "A", NA))
+  if (p$side == "wfh") return(c(NA, NA, NA, NA, "A"))
   return(rep(NA, 5))
 }
 
@@ -43,6 +48,11 @@ get_viewport_vector_number <- function(chartcode) {
   if (p$design == "C" & p$side == "-hdc")  return(c(NA, NA, NA, 2, NA))
   if (p$design == "E" & p$side == "front") return(c(NA, 4, 3, NA, NA))
   if (p$design == "E" & p$side == "back")  return(c(1, NA, NA, NA, NA))
+  if (p$side == "hgt") return(c(NA, 1, NA, NA, NA))
+  if (p$side == "wgt") return(c(NA, NA, 1, NA, NA))
+  if (p$side == "hdc") return(c(1, NA, NA, NA, NA))
+  if (p$side == "bmi") return(c(NA, NA, NA, 1, NA))
+  if (p$side == "wfh") return(c(NA, NA, NA, NA, 1))
   return(rep(NA, 5))
 }
 
