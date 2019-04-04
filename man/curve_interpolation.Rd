@@ -33,14 +33,14 @@ the point is observed or not.
 \description{
 We would normally connect the points of a growth curve by
 straight lines. This is OK when ages are relatively close
-together. However, for age that are more apart, the straight
+together. However, for ages that are more apart, the straight
 line gives an ugly representation that - moreover - underestimates
-real growth during the interval.
+real growth during that interval.
 }
 \details{
 The \code{curve_interpolation()} function provides a solution
 for this. It defines a number of additional points (specified
-through the \code{grid} argument), and calculates the linear
+through the \code{xout} argument), and calculates the linear
 interpolation between these points in the Z-scores metric. After
 that, the Z-scores are transformed back to the original scale,
 so the points to plot then follow the curvy reference lines.
