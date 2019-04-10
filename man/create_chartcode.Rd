@@ -5,17 +5,16 @@
 \title{Construct a single chart code from user input}
 \usage{
 create_chartcode(chartgrp = c("nl2010", "preterm", "who"),
-  etn = c("netherlands", "turkish", "moroccan", "hindustani"),
-  sex = c("male", "female"), agegrp = c("0-15m", "0-4y", "1-21y",
-  "0-21y", "0-4ya"), side = c("front", "back", "-hdc", "both", "hgt",
-  "wgt", "hdc", "bmi", "wfh"), week = 32, language = c("dutch",
-  "english"), version = "")
+  etn = c("nl", "tu", "ma", "hs"), sex = c("male", "female"),
+  agegrp = c("0-15m", "0-4y", "1-21y", "0-21y", "0-4ya"),
+  side = c("front", "back", "-hdc", "both", "hgt", "wgt", "hdc", "bmi",
+  "wfh"), week = 32, language = c("dutch", "english"), version = "")
 }
 \arguments{
 \item{chartgrp}{The chart group: \code{'nl2010'}, \code{'preterm'} or \code{'who'}}
 
-\item{etn}{Either \code{'netherlands'}, \code{'turkish'}, \code{'moroccan'} or
-\code{'hindustani'}. May also be abbreviates to a single letter.}
+\item{etn}{Either \code{'nl'}, \code{'tu'}, \code{'ma'} or
+\code{'hs'}. May also be abbreviates to a single letter.}
 
 \item{sex}{Either \code{'male'} or \code{'female'}}
 

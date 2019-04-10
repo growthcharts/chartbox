@@ -2,8 +2,8 @@
 #'
 #'@aliases create_chartcode
 #'@param chartgrp The chart group: \code{'nl2010'}, \code{'preterm'} or \code{'who'}
-#'@param etn Either \code{'netherlands'}, \code{'turkish'}, \code{'moroccan'} or
-#'\code{'hindustani'}. May also be abbreviates to a single letter.
+#'@param etn Either \code{'nl'}, \code{'tu'}, \code{'ma'} or
+#'\code{'hs'}. May also be abbreviates to a single letter.
 #'@param sex Either \code{'male'} or \code{'female'}
 #'@param agegrp Either \code{'0-15m'}, \code{'0-4y'}, \code{'1-21y'}, \code{'0-21y'}
 #' or \code{'0-4ya'}. Age group \code{'0-4ya'} provides the 0-4 chart with weight
@@ -14,7 +14,7 @@
 #'@param version Version number. Default is to have no version number.
 #'@export
 create_chartcode <- function(chartgrp = c('nl2010', 'preterm', 'who'),
-                          etn = c('netherlands', 'turkish', 'moroccan','hindustani'),
+                          etn = c('nl', 'tu', 'ma', 'hs'),
                           sex = c('male', 'female'),
                           agegrp = c('0-15m', '0-4y', '1-21y', '0-21y', '0-4ya'),
                           side = c('front', 'back', '-hdc', 'both', 'hgt',
@@ -28,6 +28,9 @@ create_chartcode <- function(chartgrp = c('nl2010', 'preterm', 'who'),
   sex <- match.arg(sex)
   side <- match.arg(side)
   language <- match.arg(language)
+
+  # use design E if wgt is asked for 0-ya
+  if (agegrp == "0-4y" & side == "wgt") agegrp = "0-4ya"
 
   ## c1 chart group/etnicity: N, T, M, P, H
   c1 <- switch(chartgrp,
