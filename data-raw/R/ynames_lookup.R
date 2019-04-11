@@ -265,7 +265,12 @@ ynames_lookup$seq[ynames_lookup$chartcode == "NMEA" &
 ynames_lookup$seq[ynames_lookup$chartcode == "NJEA" &
                     ynames_lookup$yname == "wgt"] <- "rt"
 
+ynames_lookup$seq[ynames_lookup$chartcode == "NMEW" &
+                    ynames_lookup$yname == "wgt"] <- "rt"
+ynames_lookup$seq[ynames_lookup$chartcode == "NJEW" &
+                    ynames_lookup$yname == "wgt"] <- "rt"
+
+
 # save
 usethis::use_data(ynames_lookup, overwrite = TRUE)
-
 
