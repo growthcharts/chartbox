@@ -4,7 +4,7 @@
 \alias{curve_interpolation}
 \title{Interpolates the growth curves along the references}
 \usage{
-curve_interpolation(data, xname = "x", yname = "y", zname = "y_z",
+curve_interpolation(data, xname = "x", yname = "y", zname = NULL,
   xout, reference)
 }
 \arguments{

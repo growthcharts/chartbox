@@ -40,12 +40,13 @@
 #'int
 #'@export
 curve_interpolation <- function(data, xname = "x", yname = "y",
-                                zname = "y_z", xout, reference) {
+                                zname = NULL, xout, reference) {
 
   if (!is.reference(reference)) stop("Argument `reference` not of class `reference`")
 
-  # zname
-  zname <- paste(yname, "z", sep = "_")
+  # automatic zname
+  if (is.null(zname))
+    zname <- paste(yname, "z", sep = "_")
 
   # select observed data
   observed <- data %>%
