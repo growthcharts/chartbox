@@ -30,7 +30,6 @@ test_that("handles id with all missing outcome measurements", {
                tolerance = 0.001)
 })
 
-# wfh preterm, two height observations below 50 cm (no standard)
 # first, a case where it works
 data3a <- data.frame(
   id = c(2, 2),
@@ -38,14 +37,24 @@ data3a <- data.frame(
   hgt = c(58.1, 63.6),
   stringsAsFactors = FALSE)
 ref3 <- clopus::nl1997[["nl1997.fwfhNLA"]]
-curve_interpolation(data3a, xname = "hgt", yname = "wgt", zname = "wfh_z",
-                    xout = ref3@table@table$x, reference = ref3)
+
+test_that("handles wfh correctly", {
+  expect_equal(7L,
+               nrow(curve_interpolation(data3a, xname = "hgt",
+                                        yname = "wgt", zname = "wfh_z",
+                                        xout = ref3@table@table$x,
+                                        reference = ref3)))})
 
 # problem case
+# wfh preterm, two height observations below 50 cm
 data3 <- data.frame(
   id = c(2, 2),
   wgt = c(1.25, 2.10),
   hgt = c(38, 43.6),
   stringsAsFactors = FALSE)
-# curve_interpolation(data3, xname = "hgt", yname = "wgt",
-#                     xout = ref3@table@table$x, reference = ref3)
+test_that("handles wfh with heights below 50cm correctly", {
+  expect_equal(2L,
+               nrow(curve_interpolation(data3, xname = "hgt",
+                                        yname = "wgt", zname = "wfh_z",
+                                        xout = ref3@table@table$x,
+                                        reference = ref3)))})

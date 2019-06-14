@@ -92,23 +92,29 @@ curve_interpolation <- function(data, xname = "x", yname = "y",
     ungroup() %>%
     select(one_of(c("id", xname, yname, zname, "obs")))
 
-  # transform to z, interpolate and backtransform to y
+  # select subset with bending points
   grid <- grid %>%
-    filter(.data$do_approx) %>%
-    mutate(!!zname := approx(x = .data[[xname]], y = .data[[zname]],
-                             xout = .data[[xname]])$y) %>%
-    ungroup() %>%
-    mutate(yt = z2y(z = .data[[zname]], x = .data[[xname]],
-                    ref = reference))
+    filter(.data$do_approx)
 
-  # overwrite any NA's in yname
-  ov <- grid %>%
-    filter(is.na(.data[[yname]])) %>%
-    mutate(!!yname := .data$yt)
-  grid <- grid %>%
-    filter(!is.na(.data[[yname]])) %>%
-    bind_rows(ov) %>%
-    select(one_of(c("id", xname, yname, zname, "obs")))
+  # if there are bending points left:
+  # transform to z, interpolate and backtransform to y
+  if (nrow(grid) > 0L) {
+    grid <- grid %>%
+      mutate(!!zname := approx(x = .data[[xname]], y = .data[[zname]],
+                               xout = .data[[xname]])$y) %>%
+      ungroup() %>%
+      mutate(yt = z2y(z = .data[[zname]], x = .data[[xname]],
+                      ref = reference))
+
+    # overwrite any NA's in yname
+    ov <- grid %>%
+      filter(is.na(.data[[yname]])) %>%
+      mutate(!!yname := .data$yt)
+    grid <- grid %>%
+      filter(!is.na(.data[[yname]])) %>%
+      bind_rows(ov) %>%
+      select(one_of(c("id", xname, yname, zname, "obs")))
+  }
 
   # append singletons and sort
   grid %>%
