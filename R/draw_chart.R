@@ -14,7 +14,7 @@
 draw_chart <- function(chart,
                        height = 29.7/2.54, width = 21 / 2.54) {
 
-  if (!is.grob(chart)) stop("Not a grob.")
+  if (!inherits(chart, "grob")) stop("Not a grob.")
   chartcode <- chart$name
 
   # set the palette
