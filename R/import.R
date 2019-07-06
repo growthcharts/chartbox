@@ -1,4 +1,6 @@
 #' @import donordata
+#' @importFrom chartcatalog get_breakpoints get_reference get_seq
+#'                          get_tx get_ty get_ynames parse_chartcode
 #' @importFrom grDevices    dev.off palette pdf
 #' @importFrom grid         grid.draw is.grob unit childNames gList
 #'                          gTree setGrob polylineGrob gpar
