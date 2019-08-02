@@ -34,7 +34,7 @@ pdf.options(useDingbats = FALSE, colormodel = "srgb", family = "Helvetica")
 
 setpalet <- function(chartcode) {
   palettes <- create.palettes()
-  parsed <- parse_chartcode(chartcode)
+  parsed <- chartcatalog::parse_chartcode(chartcode)
   palette(palettes[parsed$population,])
 }
 
