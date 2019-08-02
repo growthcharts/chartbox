@@ -2,7 +2,7 @@
 #
 # Writes selected WHO growth charts
 
-library(chaco)
+library(chartdesigner)
 library(chartbox)
 
 wholist <- c("WJAA", "WMAA", "WJBA", "WMBA")

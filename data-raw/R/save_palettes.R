@@ -1,4 +1,4 @@
 # save_palettes.R
 
-palettes <- chaco::create.palettes(background = "#F7F7F7")
+palettes <- chartdesigner::create.palettes()
 usethis::use_data(palettes)

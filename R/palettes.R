@@ -10,7 +10,7 @@
 #' \item{light}{Lightish color}
 #' \item{aux1}{Color aux1}
 #' \item{aux2}{Color aux2} }
-#' @seealso \code{\link[chaco]{create.palettes}}
+#' @seealso \code{\link[chartdesigner]{create.palettes}}
 #' @keywords datasets
 NULL
 

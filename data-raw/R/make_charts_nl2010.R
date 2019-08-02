@@ -2,7 +2,7 @@
 #
 # Writes selected Dutch 2010 growth chart series to the data directory
 
-library(chaco)
+library(chartdesigner)
 library(chartbox)
 
 paper <- "A4"

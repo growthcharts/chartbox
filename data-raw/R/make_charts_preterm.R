@@ -2,7 +2,7 @@
 #
 # Writes selected preterm growth chart series
 
-library(chaco)
+library(chartdesigner)
 library(chartbox)
 
 preterms <- c(
