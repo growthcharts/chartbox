@@ -16,7 +16,7 @@ Imports:
     chartcatalog,
     grDevices
 Suggests:
-    chartdesigner (>= 0.30.0)
+    chartdesigner (>= 0.30.1)
 Remotes: 
     stefvanbuuren/chartcatalog,
     stefvanbuuren/chartdesigner
