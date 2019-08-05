@@ -1,4 +1,4 @@
-#' Draw growth chart
+#' Save growth chart as pdf
 #'
 #' Produce a pdf of the growth chart
 #' @param chart A \code{grob} or \code{gTree} object
@@ -8,11 +8,10 @@
 #' @examples
 #' \dontrun{
 #' z <- load_chart("NJAA")
-#' draw_chart(z)
+#' pdf_chart(z)
 #' }
 #' @export
-draw_chart <- function(chart,
-                       height = 29.7/2.54, width = 21 / 2.54) {
+pdf_chart <- function(chart, height = 29.7/2.54, width = 21/2.54) {
 
   if (!inherits(chart, "grob")) stop("Not a grob.")
   chartcode <- chart$name
