@@ -6,7 +6,7 @@ Authors@R: person("Stef", "van Buuren", email = "stef.vanbuuren@tno.nl", role = 
 Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
 Description: A collection of growth charts programmed in the grid package. 
     It is used by other packages that add functionality to the charts.
-License: file LICENSE
+License: AGPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
@@ -17,6 +17,6 @@ Imports:
     grDevices
 Suggests:
     chartdesigner (>= 0.30.1)
-Remotes: 
+Remotes:
     stefvanbuuren/chartcatalog,
     stefvanbuuren/chartdesigner
