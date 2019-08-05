@@ -16,6 +16,6 @@
 Palettes for Growth Charts
 }
 \seealso{
-\code{\link[chartdesigner]{create.palettes}}
+\code{\link[chartdesigner]{create_palettes}}
 }
 \keyword{datasets}

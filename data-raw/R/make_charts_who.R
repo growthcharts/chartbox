@@ -33,7 +33,7 @@ pdfdir <- file.path(project, "pdf")
 pdf.options(useDingbats = FALSE, colormodel = "srgb", family = "Helvetica")
 
 setpalet <- function(chartcode) {
-  palettes <- create.palettes()
+  palettes <- chartbox::palettes
   parsed <- chartcatalog::parse_chartcode(chartcode)
   palette(palettes[parsed$population,])
 }

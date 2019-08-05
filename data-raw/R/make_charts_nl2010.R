@@ -61,7 +61,6 @@ chartbox <- file.path(project, "inst/library/nl2010")
 for (chartcode in sides) {
   outfile <- file.path(chartbox, paste(chartcode, "rds", sep = "."))
   g <- growthchart(chartcode, paper = paper)
-  if (substr(chartcode, 3, 4) == "EA") g <- clip_references(g)
   saveRDS(g, file = outfile, compress = "xz")
 }
 
@@ -77,7 +76,7 @@ pdfdir <- file.path(project, "pdf")
 pdf.options(useDingbats = FALSE, colormodel = "srgb", family = "Helvetica")
 
 setpalet <- function(chartcode) {
-  palettes <- create.palettes()
+  palettes <- chartbox::palettes
   parsed <- chartcatalog::parse_chartcode(chartcode)
   palette(palettes[parsed$population,])
 }
