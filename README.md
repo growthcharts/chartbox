@@ -7,22 +7,14 @@
 
 <!-- badges: end -->
 
-The `chartbox` package stores generated growth charts. With the package
-you can
+The `chartbox` package stores empty Dutch growth charts. With the
+package you can
 
   - list the available growth charts;
   - set the color palette;
   - load one of the growth charts for further processing.
 
-The package obtains its charts from the
-[chartdesigner](https://github.com/stefvanbuuren/chartdesigner) package.
-
 ## Installation
-
-In order to install `chartbox` you need a personal access token (PAT)
-from <https://github.com/settings/tokens>. I assume the token is stored
-in the environmental variable `GITHUB_PAT`, so that
-`Sys.getenv("GITHUB_PAT")` returns your token.
 
 The following statements will install the `chartbox` package
 
