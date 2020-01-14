@@ -3,10 +3,6 @@
 
 # chartbox
 
-<!-- badges: start -->
-
-<!-- badges: end -->
-
 The `chartbox` package stores empty Dutch growth charts. With the
 package you can
 
