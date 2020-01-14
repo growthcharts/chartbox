@@ -47,6 +47,7 @@ solo <- c(
   "MJAO", "MJAH", "MJAW", "MJBR", "MJBH", "MJBO", "MJCR", "MJCH", "MJCQ", "MJCO",
   "MMAO", "MMAH", "MMAW", "MMBR", "MMBH", "MMBO", "MMCR", "MMCH", "MMCQ", "MMCO",
   "NJAO", "NJAH", "NJAW", "NJBR", "NJBH", "NJBO", "NJCR", "NJCH", "NJCQ", "NJCO",
+  "NJAD", "NMAD", "NJBD", "NMBD",
   "NJEW", "NJEH", "NJEO",
   "NMAO", "NMAH", "NMAW", "NMBR", "NMBH", "NMBO", "NMCR", "NMCH", "NMCQ", "NMCO",
   "NMEW", "NMEH", "NMEO",
