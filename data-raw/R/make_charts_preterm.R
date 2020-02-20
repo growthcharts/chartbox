@@ -18,7 +18,7 @@ solo <-
     paste0("PJEHN", 25:36), paste0("PMEHN", 25:36),
     paste0("PJEWN", 25:36), paste0("PMEWN", 25:36),
     paste0("PJADN", 25:36), paste0("PMADN", 25:36),
-    paste0("PJBDN", 25:36), paste0("PMBDN", 25:36))
+    paste0("PJEDN", 25:36), paste0("PMEDN", 25:36))
 
 sides <- c(preterms, solo)
 
