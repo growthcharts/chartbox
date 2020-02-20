@@ -1,7 +1,7 @@
 Package: chartbox
 Type: Package
 Title: Collection of Growth Charts
-Version: 1.1.0
+Version: 1.2.0
 Authors@R: person("Stef", "van Buuren", email = "stef.vanbuuren@tno.nl", role = c("aut", "cre"))
 Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
 Description: A collection of growth charts programmed in the grid package. 
@@ -16,7 +16,7 @@ Imports:
     chartcatalog,
     grDevices
 Suggests:
-    chartdesigner (>= 0.30.1)
+    chartdesigner (>= 0.33.0)
 Remotes:
     stefvanbuuren/chartcatalog,
     stefvanbuuren/chartdesigner
