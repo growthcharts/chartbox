@@ -3,12 +3,17 @@
 
 # chartbox
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/growthcharts/chartbox/workflows/R-CMD-check/badge.svg)](https://github.com/growthcharts/chartbox/actions)
+<!-- badges: end -->
+
 The `chartbox` package stores empty Dutch growth charts. With the
 package you can
 
-  - list the available growth charts;
-  - set the color palette;
-  - load one of the growth charts for further processing.
+-   list the available growth charts;
+-   set the color palette;
+-   load one of the growth charts for further processing.
 
 ## Installation
 
@@ -16,7 +21,7 @@ The following statements will install the `chartbox` package
 
 ``` r
 install.packages("remotes")
-remotes::install_github("stefvanbuuren/chartbox")
+remotes::install_github("growthcharts/chartbox")
 ```
 
 ## Example
