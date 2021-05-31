@@ -1,3 +1,7 @@
+# chartbox 1.6.0
+
+* Rebuilds all charts in R 4.1.0
+
 # chartbox 1.5.0
 
 * Update of all charts in an attempt to evade grid drawing problems
