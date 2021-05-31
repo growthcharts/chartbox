@@ -119,6 +119,7 @@
 <a href="#chartbox-160" class="anchor"></a>chartbox 1.6.0</h1>
 <ul>
 <li>Rebuilds all charts in R 4.1.0</li>
+<li>Found out the hard way that there were undocumented changes made to the internal structure of grobs saved to disk <code>grid 4.1.0</code>. Using <code>grid::draw()</code> on an object created by the <code>grid</code> package in R 4.0.5 (or earlier) resulted in the error from the C code in grid: <code>attempt to set index 26/22 in SET_VECTOR_ELT In call: grid.Call.graphics(C_setviewport, vp, TRUE)</code>. If you have this, update to R 4.1, rebuild the graphs, and save them.</li>
 </ul>
 </div>
     <div id="chartbox-150" class="section level1">
