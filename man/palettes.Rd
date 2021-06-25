@@ -18,7 +18,4 @@ indicates the population. Used for lines and smaller fills.}
 \description{
 Palettes for Growth Charts
 }
-\seealso{
-\code{\link[chartdesigner]{create_palettes}}
-}
 \keyword{datasets}

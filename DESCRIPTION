@@ -15,9 +15,6 @@ Depends:
 Imports:
     chartcatalog,
     grDevices
-Suggests:
-    chartdesigner (>= 0.33.0)
 Remotes:
-    growthcharts/chartcatalog,
-    stefvanbuuren/chartdesigner
+    growthcharts/chartcatalog
 URL: https://github.com/growthcharts/chartbox

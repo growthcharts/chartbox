@@ -11,7 +11,6 @@
 #' \item{light}{Light color used for filling the normal centile range.}
 #' \item{aux1}{Color aux1.}
 #' \item{aux2}{Color aux2}}
-#' @seealso \code{\link[chartdesigner]{create_palettes}}
 #' @keywords datasets
 NULL
 
