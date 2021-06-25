@@ -1,3 +1,7 @@
+# chartbox 1.7.0
+
+* Removes `chartdesigner` from suggests to ease container building
+
 # chartbox 1.6.0
 
 * Rebuilds all charts in R 4.1.0
