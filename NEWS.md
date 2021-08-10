@@ -1,3 +1,7 @@
+# chartbox 1.9.0
+
+* Sync version numbering with `chartcatalog` package
+
 # chartbox 1.8.0
 
 * Adds 28 charts for growth of children with Down syndrome to `nl2010` library
