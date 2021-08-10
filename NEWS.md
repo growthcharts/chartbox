@@ -1,3 +1,7 @@
+# chartbox 1.8.0
+
+* Adds 28 charts for growth of children with Down syndrome to `nl2010` library
+
 # chartbox 1.7.0
 
 * Removes `chartdesigner` from suggests to ease container building
