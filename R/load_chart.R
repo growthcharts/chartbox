@@ -13,6 +13,7 @@ load_chart <- function(chartcode) {
                      "N" = "nl2010",
                      "M" = "nl2010",
                      "T" = "nl2010",
+                     "D" = "nl2010",
                      "P" = "preterm",
                      "E" = "nl2010",
                      "H" = "nl2010",
