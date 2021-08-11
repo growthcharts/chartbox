@@ -50,8 +50,8 @@ down <- c(
   "DMCA", "DMCB")
 
 solo <- c(
-  "DJAO", "DJAH", "DJAW", "DJBR", "DJBH", "DJCR", "DJCH", "DJCQ",
-  "DMAO", "DMAH", "DMAW", "DMBR", "DMBH", "DMCR", "DMCH", "DMCQ",
+  "DJAO", "DJAH", "DJAW", "DJBR", "DJBH", "DJBO", "DJCR", "DJCH", "DJCQ", "DJCO",
+  "DMAO", "DMAH", "DMAW", "DMBR", "DMBH", "DMBO", "DMCR", "DMCH", "DMCQ", "DMCO",
   "HJAO", "HJAH", "HJAW", "HJBR", "HJBH", "HJCR", "HJCH", "HJCQ",
   "HMAO", "HMAH", "HMAW", "HMBR", "HMBH", "HMCR", "HMCH", "HMCQ",
   "MJAO", "MJAH", "MJAW", "MJBR", "MJBH", "MJBO", "MJCR", "MJCH", "MJCQ", "MJCO",
