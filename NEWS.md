@@ -1,3 +1,7 @@
+# chartbox 1.10.0
+
+* Add four head circumference charts
+
 # chartbox 1.9.0
 
 * Sync version numbering with `chartcatalog` package
