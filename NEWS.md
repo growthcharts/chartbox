@@ -1,3 +1,8 @@
+# chartbox 1.11.0
+
+* Updates all chart from `chartdesigner 0.39.0`
+* Expands on the `chartgrp` documentations
+
 # chartbox 1.10.0
 
 * Add four head circumference charts
