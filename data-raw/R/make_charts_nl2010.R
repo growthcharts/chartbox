@@ -2,7 +2,7 @@
 #
 # Writes selected Dutch 2010 growth chart series to the data directory
 
-library(chartdesigner)
+library(chartdesigner)  # > 0.40.0
 library(chartbox)
 
 paper <- "A4"
