@@ -70,6 +70,7 @@ sides <- c(dutch, turkish, moroccan, hindostan, down, solo)
 project <- path.expand("~/package/chartbox/chartbox")
 chartbox <- file.path(project, "inst/library/nl2010")
 for (chartcode in sides) {
+  # cat(chartcode, "\n")
   outfile <- file.path(chartbox, paste(chartcode, "rds", sep = "."))
   g <- growthchart(chartcode, paper = paper)
   saveRDS(g, file = outfile, compress = "xz")
@@ -93,6 +94,7 @@ setpalet <- function(chartcode) {
 }
 
 for (chartcode in chartcodes) {
+  # cat(chartcode, "\n")
   infile <- file.path(chartbox, paste(chartcode, "rds", sep = "."))
   g <- readRDS(file = infile)
   filename <- file.path(pdfdir, "nl2010", paste(chartcode, "pdf", sep = "."))
