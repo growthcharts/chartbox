@@ -1,3 +1,7 @@
+# chartbox 1.13.0
+
+* Regenerates `nl2010` charts from chartdesigner `0.40.1`
+
 # chartbox 1.12.0
 
 * Updates nl2010 chart from `chartdesigner 0.40.0`. This update corrects a bug that used the nl5 instead of the nl3 references for weight for age 0-15 months.
