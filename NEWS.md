@@ -1,3 +1,7 @@
+# chartbox 1.14.0
+
+* Adds Phase 1 D-score charts `WJAD`, `WJBD`, `WMAD`, `WMBD` to chart collection
+
 # chartbox 1.13.0
 
 * Regenerates `nl2010` charts from chartdesigner `0.40.1`
