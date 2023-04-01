@@ -8,7 +8,8 @@ library(chartbox)
 wholist <- c("WJAA", "WMAA", "WJBA", "WMBA")
 
 solo <- c("WJAO", "WJAH", "WJAW", "WJBR", "WJBH",
-          "WMAO", "WMAH", "WMAW", "WMBR", "WMBH")
+          "WMAO", "WMAH", "WMAW", "WMBR", "WMBH",
+          "WJAD", "WJBD", "WMAD", "WMBD")
 
 sides <- c(wholist, solo)
 
