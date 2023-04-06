@@ -9,7 +9,10 @@ wholist <- c("WJAA", "WMAA", "WJBA", "WMBA")
 
 solo <- c("WJAO", "WJAH", "WJAW", "WJBR", "WJBH",
           "WMAO", "WMAH", "WMAW", "WMBR", "WMBH",
-          "WJAD", "WJBD", "WMAD", "WMBD")
+          paste0("WJADN", c(25:36, 40)),
+          paste0("WMADN", c(25:36, 40)),
+          paste0("WJBDN", c(25:36, 40)),
+          paste0("WMBDN", c(25:36, 40)))
 
 sides <- c(wholist, solo)
 
