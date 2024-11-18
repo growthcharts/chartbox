@@ -1,3 +1,7 @@
+# chartbox 1.16.0
+
+* Repair a problem with the labels of the percentileStrip for design E (weight for age, 0-4 years)
+
 # chartbox 1.15.0
 
 + Update all WHO charts
