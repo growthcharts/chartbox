@@ -22,6 +22,12 @@ solo <-
 
 sides <- c(preterms, solo)
 
+# # Update only selected charts for design E
+# sides <- c(paste0("PJEAN", 25:36), paste0("PMEAN", 25:36),
+#            paste0("PJEHN", 25:36), paste0("PMEHN", 25:36),
+#            paste0("PJEWN", 25:36), paste0("PMEWN", 25:36))
+#            # paste0("PJEDN", 25:36), paste0("PMEDN", 25:36))
+
 # write to chartbox
 project <- path.expand("~/package/chartbox/chartbox")
 chartbox <- file.path(project, "inst/library/preterm")
