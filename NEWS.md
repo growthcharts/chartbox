@@ -1,3 +1,7 @@
+# chartbox 1.17.0
+
+* Updates WHO curves to incorporate bug fix for 0-15 head circumference chart
+
 # chartbox 1.16.0
 
 * Repair a problem with the labels of the percentileStrip for design E (weight for age, 0-4 years)
