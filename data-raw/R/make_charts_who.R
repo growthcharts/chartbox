@@ -2,7 +2,7 @@
 #
 # Writes selected WHO growth charts
 
-library(chartdesigner)
+library(chartdesigner)  # requires chartdesigner > 0.45.0!
 library(chartbox)
 
 wholist <- c("WJAA", "WMAA", "WJBA", "WMBA")
